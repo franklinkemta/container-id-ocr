@@ -1,0 +1,4 @@
+container
+refrigerator
+truck
+train

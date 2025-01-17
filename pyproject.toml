@@ -1,0 +1,26 @@
+[project]
+name = "container-id-ocr"
+version = "0.1.0"
+description = "Shipping containers, Detection, Identification and Reporting using YOLO and OCR"
+authors = [
+  {name = "Franklin Kemta"},
+]
+license = {text = "MIT"}
+readme = "README.md"
+keywords = ["computer vision", "ocr", "yolo", "analytics", "shipping container"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python"
+]
+
+requires-python = ">=3.8"
+dependencies = [
+  "ultralytics",
+]
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = { find = { where = ["."], include = ["src", "src.*"], exclude = ["todo"] } }
