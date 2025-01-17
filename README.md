@@ -25,6 +25,9 @@ shipping container asset list management in yard, using YOLO for detection and O
 - https://targetbox.ca/product/20ft-shipping-container/
 - https://onsitestorage.com/sale-shipping-containers/
 
+## TODO
+- Train custom YOLO model for localized container id detection
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
