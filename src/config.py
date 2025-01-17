@@ -14,6 +14,7 @@ class Config:
         os.path.abspath(os.path.join(os.path.dirname(__file__), "inputs")),
     )
     SHOW_OUTPUT = bool(os.environ.get("SHOW_OUTPUT", False))
+    INVENTORY_LIST_PATH = os.environ.get("INVENTORY_LIST_PATH", "inventory_list.csv")
 
     def get_classes(labels_path="labels.txt") -> list[str]:
         labels = []

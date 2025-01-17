@@ -2,9 +2,10 @@ import cv2
 
 from config import Config
 from steps.detection import Detector
+from steps.ocr import OCR
 
-if __name__ == "__main__":
 
+def detect_and_crop():
     detector = Detector()
 
     skip_dirs = [
@@ -36,3 +37,18 @@ if __name__ == "__main__":
 
     if Config.SHOW_OUTPUT:
         cv2.destroyAllWindows()
+
+
+def read_ocr():
+    ocr_reader = OCR()
+
+    cropped_images = Config.load_images(Config.CROP_DIR)
+
+    results = ocr_reader.read_all(cropped_images)
+
+    # print(results)
+
+
+if __name__ == "__main__":
+    # detect_and_crop()
+    read_ocr()
